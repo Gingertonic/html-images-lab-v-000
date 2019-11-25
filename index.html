@@ -9,21 +9,10 @@
 <body>
 
   <img src="./img.png">
-
+  <img src="./img.png" alt="Blah blah blah">
 </body>
 </html>
 
-require 'pry'
-
-RSpec.describe 'index.html' do
-  it 'contains an initial <img> tag with a src attribute' do
-    img = parsed_html.search('img').first
-    expect(img).to_not be_nil, "The first <img> tag is missing!"
-
-
-    expect(img.attributes["src"]).to_not be_nil, "Your first <img> tag needs a src attribute"
-    expect(img.attributes["src"].value).to_not eq(""), "Every src attribute needs an assigned value, either a URL or relative path"
-  end
 
 
   it 'contains a second <img> tag with src and alt attributes' do
